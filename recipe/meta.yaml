@@ -1,4 +1,4 @@
-{% set version = "1.2.0" %}
+{% set version = "1.3.0" %}
 
 package:
   name: gecos
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/biotite-dev/gecos/archive/v{{ version }}.tar.gz
-  sha256: 48fc10ae4d018531b21815bedb49b095b33e13394ec3a69266d28e7c7c4bc01e
+  sha256: 8ef587d735ca671bbd97d7b66fd6b2ae98032ad9cd2aef0edb711635c8b30f49
 
 build:
   number: 0
