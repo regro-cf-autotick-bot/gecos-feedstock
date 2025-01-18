@@ -9,7 +9,7 @@ source:
   sha256: 331a765a956763eca6250c29cabcd60e4e7f152bb9560960b59c0e6f107c5158
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   noarch: python
   entry_points:
@@ -17,11 +17,11 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - pip
     - poetry
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - numpy >=1.13
     - biotite >=0.21
     - scikit-image >=0.17
@@ -32,6 +32,7 @@ test:
     - tests/
   requires:
     - pytest
+    - python {{ python_min }}
   commands:
     - pytest --ignore tests/test_version.py
     - gecos --help
